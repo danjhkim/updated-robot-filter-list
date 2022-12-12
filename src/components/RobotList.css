@@ -1,0 +1,195 @@
+.RoboFrame {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 1em;
+	box-sizing: border-box;
+	border-bottom: 2px solid #e2e2e2;
+	position: relative;
+}
+
+.loadingText {
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.RoboFrame:last-of-type {
+	border-bottom: none;
+}
+
+.portpic {
+	margin-top: 1em;
+}
+
+.portpic img {
+	border: 2px solid #e2e2e2;
+	border-radius: 50%;
+	width: 120px;
+}
+
+.details {
+	margin-left: 2em;
+}
+
+.name {
+	font-weight: 800;
+	font-size: 2rem;
+	margin-bottom: 0.3em;
+	text-align: center;
+}
+
+.minordetails {
+	margin-left: 1em;
+}
+
+.minordetails * {
+	margin-bottom: 0.5em;
+}
+
+.plusButton {
+	margin-left: auto;
+}
+
+.innerBox {
+	position: relative;
+}
+
+button {
+	padding: 0;
+	border: none;
+	background: none;
+	position: relative;
+	width: 60px;
+	height: 60px;
+}
+
+.innerBox input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.innerBox input:checked ~ button span:first-child {
+	display: none;
+}
+
+button span {
+	position: absolute;
+	transition: 300ms;
+	background: #b3b3b3;
+	border-radius: 2px;
+}
+
+.innerBox input:hover ~ button span {
+	background: black;
+}
+
+button span:first-child {
+	top: 25%;
+	bottom: 25%;
+	width: 10%;
+	left: 45%;
+}
+
+button span:last-child {
+	left: 25%;
+	right: 25%;
+	height: 10%;
+	top: 45%;
+}
+
+.allTests {
+	height: min-content;
+}
+
+.totals,
+.totals * {
+	margin: 0;
+	display: flex;
+	line-height: 12px;
+}
+
+.test {
+	margin-right: 2em;
+}
+
+.tagsearch {
+	font-size: 1rem;
+	width: 15em;
+	height: 40px;
+	border: none;
+	box-sizing: border-box;
+	border-bottom: 3px solid #e2e2e2;
+	outline: none;
+	transition-duration: 0.3s;
+}
+
+.tagsearch:focus {
+	border-color: #7c7c7c;
+}
+
+.tags {
+	position: relative;
+	background-color: #e2e2e2;
+	padding: 0.5em;
+	box-sizing: border-box;
+	border-radius: 3px;
+	margin-left: 0.4em;
+}
+
+@media only screen and (max-width: 570px) {
+	.RoboFrame {
+		flex-flow: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.portpic {
+		margin-bottom: 1em;
+	}
+
+	.details {
+		margin-left: 0em;
+		margin-top: 0.5em;
+	}
+
+	.name {
+		font-weight: 800;
+		font-size: 2rem;
+	}
+
+	.minordetails {
+		margin-left: 0em;
+		text-align: center;
+	}
+
+	.plusButton {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.allTests {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.tagBox {
+		margin: 0 auto;
+		max-width: 200px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.name {
+		font-weight: 800;
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,53 @@
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.RoboList {
+	position: relative;
+	width: 100%;
+	height: 700px;
+	background-color: #ffffff;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-radius: 10px;
+	border: 3px solid #e2e2e2;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgb(102, 102, 102);
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(102, 102, 102);
+}
+
+@media only screen and (max-width: 700px) {
+	.wrapper {
+		max-width: none;
+		padding-left: 0em;
+		padding-right: 0em;
+	}
+}
+.searchboxesWrapper {
+	z-index: 2;
+	position: -webkit-sticky;
+	position: sticky;
+	top: -1px;
+}

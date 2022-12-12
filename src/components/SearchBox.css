@@ -1,0 +1,18 @@
+.searchBox {
+	display: flex;
+	justify-content: center;
+}
+.searchBox input {
+	font-size: 1rem;
+	width: 98%;
+	height: 40px;
+	border: none;
+	box-sizing: border-box;
+	border-bottom: 3px solid #e2e2e2;
+	outline: none;
+	transition-duration: 1s;
+}
+
+.searchBox input:focus {
+	border-color: black;
+}

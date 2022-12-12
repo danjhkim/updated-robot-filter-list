@@ -1,0 +1,28 @@
+.tagBox {
+	max-width: 1000px;
+}
+
+.tags {
+	display: inline-block;
+}
+
+.closer {
+	margin: 0em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: rgb(109, 109, 109);
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	top: 2px;
+	right: 2px;
+	font-size: 0.5rem;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.closer:hover {
+	background-color: rgb(245, 79, 79);
+}
