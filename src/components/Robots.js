@@ -33,7 +33,7 @@ function Robots() {
 		//! REMOVE DURING PRODUCTION
 		setTimeout(() => {
 			fetchlist();
-		}, 1500);
+		}, 200);
 	}, []);
 
 	// controlled component for search input
