@@ -77,16 +77,21 @@ const RobotList = ({
 	};
 
 	//tag deleter on click function
-	const deletetag = (e, items, index) => {
+	const deletetag = (e, items, index, id) => {
 		e.stopPropagation();
 		e.preventDefault();
 		//creating a new list with the tags removed within the nested array :)
 		let newList = [...list];
 
-		const place = newList[index].tags.indexOf(items);
-		if (place > -1) {
-			newList[index].tags.splice(place, 1);
-		}
+		newList.forEach(robot => {
+			if (robot.id === id) {
+				console.log(id);
+				console.log(robot.id);
+
+				robot.tags.splice(index, 1);
+			}
+		});
+
 		setList(newList);
 	};
 
@@ -128,8 +133,7 @@ const RobotList = ({
 									onChange={e => tagSetter(e, item)}
 									className='tagsearch'
 									type='text'
-									placeholder='Add a tag'
-									value={tagSearch[item.id]}></input>
+									placeholder='Add a tag'></input>
 							</form>
 							<div className='allTests'>
 								{item.grades.map((test, index2) => {

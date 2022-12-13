@@ -12,7 +12,9 @@ const TagList = ({ item, deletetag, index }) => {
 								{items}
 								<span
 									className='closer'
-									onClick={e => deletetag(e, items, index)}>
+									onClick={e =>
+										deletetag(e, items, index, item.id)
+									}>
 									x
 								</span>
 							</span>
